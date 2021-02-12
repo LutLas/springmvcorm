@@ -4,14 +4,28 @@
 <!DOCTYPE html>
 <html>
 <head>
+<style>
+table, th, td {
+	border: 1px solid blue;
+}
+</style>
 <meta charset="ISO-8859-1">
-<title>Register Account</title>
+<title>Registered Users</title>
 </head>
 <body>
-<c:forEach items="${users}" var="user">
-${user.id}
-${user.name}
-${user.email}
-</c:forEach>
+	<table border="1">
+		<tr>
+			<th style="padding:10px">ID</th>
+			<th style="padding:10px">Name</th>
+			<th style="padding:10px">Email</th>
+		</tr>
+		<c:forEach items="${users}" var="user">
+			<tr>
+				<td style="padding:10px">${user.id}</td>
+				<td style="padding:10px">${user.name}</td>
+				<td style="padding:10px">${user.email}</td>
+			</tr>
+		</c:forEach>
+	</table>
 </body>
 </html>

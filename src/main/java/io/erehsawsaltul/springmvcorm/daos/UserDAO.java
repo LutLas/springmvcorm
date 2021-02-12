@@ -7,4 +7,5 @@ import io.erehsawsaltul.springmvcorm.entities.User;
 public interface UserDAO {
 	int create(User user);
 	List<User> findUsers();
+	User findUser(Integer id);
 }
