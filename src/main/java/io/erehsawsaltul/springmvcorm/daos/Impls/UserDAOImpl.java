@@ -1,5 +1,7 @@
 package io.erehsawsaltul.springmvcorm.daos.Impls;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.orm.hibernate5.HibernateTemplate;
 import org.springframework.stereotype.Repository;
@@ -24,6 +26,11 @@ public class UserDAOImpl implements UserDAO {
 	@Override
 	public int create(User user) {
 		return (Integer) hibernateTemplate.save(user);
+	}
+
+	@Override
+	public List<User> findUsers() {
+		return hibernateTemplate.loadAll(User.class);
 	}
 	
 }

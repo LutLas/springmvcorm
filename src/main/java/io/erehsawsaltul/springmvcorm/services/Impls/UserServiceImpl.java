@@ -1,5 +1,7 @@
 package io.erehsawsaltul.springmvcorm.services.Impls;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -27,5 +29,10 @@ public class UserServiceImpl implements UserService {
 	public int save(User user) {
 		//Business Logic
 		return userDAO.create(user);
+	}
+
+	@Override
+	public List<User> getUsers() {
+		return userDAO.findUsers();
 	}
 }
