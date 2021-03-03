@@ -6,7 +6,7 @@
 <head>
 <style>
 table, th, td {
-	border: 1px solid blue;
+	border: .5px solid blue;
 }
 </style>
 <meta charset="ISO-8859-1">
